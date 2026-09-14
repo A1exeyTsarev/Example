@@ -1,0 +1,21 @@
+﻿<Page x:Class="Example.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Example.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LoginPage" Background="White">
+
+    <Grid>
+
+        <TextBox x:Name="LoginBox" HorizontalAlignment="Left" Margin="300,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="47" FontSize="18"/>
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="300,230,0,0" VerticalAlignment="Top" Width="220" FontSize="18" Height="47"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,42,0,0" TextWrapping="Wrap" Text="Авторизация" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="300,109,0,0" TextWrapping="Wrap" Text="Введите логин" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="300,201,0,0" TextWrapping="Wrap" Text="Введите пароль" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="ButLogin" Content="Войти" HorizontalAlignment="Center" Margin="0,335,0,0" VerticalAlignment="Top" FontSize="18" Height="38" Width="120" Click="ButLogin_Click"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,48 @@
+﻿<Page x:Class="Example.Pages.BookPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Example.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BookPage">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Left" Margin="337,10,0,0" TextWrapping="Wrap" 
+                   Text="Каталог книг" VerticalAlignment="Top" FontSize="20"/>
+
+        <ListView x:Name="LvBooks" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Информация -->
+                    <StackPanel Margin="5">
+                        <TextBlock Text="{Binding Title}" FontWeight="Bold" FontSize="16"/>
+                        <TextBlock Text="{Binding Author}"/>
+                        <TextBlock Text="{Binding GenreName}"/>
+                        <TextBlock Text="{Binding Year}"/>
+                        <TextBlock Text="{Binding Price}" Foreground="Green" FontWeight="Bold"/>
+                        
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <StackPanel Grid.Row="2">
+            <Button x:Name="BtnAdd" Content="Добавить" Visibility="Collapsed" Click="BtnAdd_Click"/>
+
+            <Button x:Name="BtnEdit" Content="Изменить" Visibility="Collapsed" Click="BtnEdite_Click"/>
+
+            <Button x:Name="BtnDelete" Content="Удалить" Visibility="Collapsed" Click="BtnDelete_Click"/>
+
+            <Button x:Name="BtnBack" Content="Выход" Click="BtnBack_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
